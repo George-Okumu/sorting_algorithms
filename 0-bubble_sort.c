@@ -8,13 +8,16 @@ unsigned int i;
 unsigned  int j;
 int temp = 0;
 
+if(array == NULL || size == 0)
+        return;
+
 for (i = 0; i < size -1; i++)
 {
     for(j = 0; j < size - 1; j++)
     {
         if(array[i] > array[j + 1])
         {
-          /*Swap the elements*/ 
+          /*Swap the arrays @ each array index*/ 
           temp = array[i];
           array[i] = array[j];
           array[j] = temp;
